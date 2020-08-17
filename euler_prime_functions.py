@@ -50,3 +50,19 @@ def primes_upto(n):
         k += 2
 
     return vec
+
+
+# rough function for getting nth prime
+def prime(n):
+
+    count = 0
+    k = 1   # generates numbers until we reach our desired count
+    while True:
+        if is_prime(k):
+            count += 1
+
+        if count == n:
+            break
+        k += 1
+
+    return k
