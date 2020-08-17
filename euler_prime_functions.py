@@ -28,3 +28,25 @@ def is_prime(n):
 
     return True
 
+
+# function that returns a list of primes up to n
+def primes_upto(n):
+
+    # base cases
+    if n == 2:
+        return [2]
+    if n == 3 or n == 4:
+        return [2,3]
+
+    # main program
+    vec = [2,3]
+    k = 5
+    while k <= n:
+        if not is_prime(k):
+            k += 2
+            continue
+
+        vec.append(k)
+        k += 2
+
+    return vec
