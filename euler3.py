@@ -8,15 +8,12 @@ import time
 # this function returns the smallest prime factor of n
 def smallest_factor(n):
 
-    # base cases
+    # base case
     if n % 2 == 0:
         return 2
 
-    if n % 3 == 0:
-        return 3
-
     # now we run through every number until we get our answer
-    k = 5
+    k = 3
     while True:
         if n % k == 0:
             return k
