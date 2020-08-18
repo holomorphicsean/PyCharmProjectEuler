@@ -66,3 +66,22 @@ def prime(n):
         k += 1
 
     return k
+
+
+# same as primes_upto function but using a sieve
+def primes_upto_sieve(n):
+
+    # create our list to distill out our primes
+    to_sieve = range(2, n+1)
+
+    # our method will be to pop off the first element into a growing list of primes
+    # then delete all of its multiples
+
+    primes = []
+    while to_sieve:
+        primes.append(to_sieve.pop(0))
+        to_sieve = [i for i in to_sieve if i % primes[-1] != 0]
+
+    return primes
+
+
